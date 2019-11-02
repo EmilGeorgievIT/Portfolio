@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+/************************************
+  Header
+***********************************/
+
+.header {
+  & {
+    background-color: #102207;
+    padding: 1rem 0;
+  }
+  .logo {
+    display: inline-block;
+    max-width: 100px;
+  }
+} 
