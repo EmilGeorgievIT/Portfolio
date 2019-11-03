@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import Intro from './components/Intro/Intro';
-import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
 import Loading from './components/Loading/Loading';
 
 class App extends Component {
@@ -8,7 +7,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isLoading: true
+      isLoading: false
     }
   }
   componentDidMount() {
@@ -26,7 +25,7 @@ class App extends Component {
           {
             isLoading ? <Loading /> : ''
           }
-          <Header />
+          <Intro />
       </div>
     );
   }
