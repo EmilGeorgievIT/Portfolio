@@ -60,7 +60,12 @@ body {
   p {
       opacity: 1 !important;
   }
- 
+
+
+  .container--small {
+        max-width: 600px;
+    }
+
 
   .container-extended {
       max-width: 95%;

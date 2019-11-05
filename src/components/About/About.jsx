@@ -11,9 +11,9 @@ export default function About() {
         <Fragment>
             <section style={backgroundImage} className="section-about">
                 <div className="container">
-                    <div className="section__head">
+                    <div className="section__head section--header-underline">
                         <h2 className='section__title'>
-                            About
+                            About Me
                         </h2>
                     </div>
                     
@@ -63,7 +63,7 @@ export default function About() {
                                         </a>
                                     </p>
                                 </li>
-                                
+
                                 <li>
                                     <p>
                                         <strong>

@@ -53,7 +53,7 @@ export default class Intro extends Component {
                             <li style={backgroundImages.about} className='about'>
                                 <a href="">
                                     <span className='nav__title'>
-                                        About
+                                        About Me
                                     </span>
 
                                     <span className='nav__number'>

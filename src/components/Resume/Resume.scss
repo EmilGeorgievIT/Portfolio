@@ -1,0 +1,14 @@
+@import './../../styles/variables';
+@import './../../styles/helper';
+
+
+/************************************
+    Resume
+***********************************/
+
+.section-resume {
+    & {
+        @include section-background-image;
+        padding: 3rem 0;
+    }
+}

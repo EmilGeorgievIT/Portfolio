@@ -1,0 +1,35 @@
+/********************************
+        Helpers
+*********************************/
+
+.section--header-underline {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .section__title {
+        & {
+            position: relative;
+            font-size: 60px;
+            text-transform: uppercase;
+            font-family: 'JosefinSans', sans-serif;
+            letter-spacing: 3px;
+        }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 30px;
+            width: 2px;
+            background-color: #b46e3c;
+        }
+    }
+}
+
+@mixin section-background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

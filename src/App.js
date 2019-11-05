@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Intro from './components/Intro/Intro';
 import Loading from './components/Loading/Loading';
 import About from './components/About/About';
+import Resume from './components/Resume/Resume';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
 
           <Intro />
           <About />
+          <Resume />
       </div>
     );
   }
