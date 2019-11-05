@@ -11,4 +11,10 @@
         @include section-background-image;
         padding: 3rem 0;
     }
+    .section__body {
+        padding: 2rem 0;
+    }
+    .section__actions {
+        margin-top: 1rem;
+    }
 }

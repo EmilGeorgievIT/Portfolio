@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Intro from './components/Intro/Intro';
 import Loading from './components/Loading/Loading';
-import About from './components/About/About';
-import Resume from './components/Resume/Resume';
+import Main from './components/Main/Main';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -28,9 +27,11 @@ class App extends Component {
             isLoading ? <Loading /> : ''
           }
 
-          <Intro />
-          <About />
-          <Resume />
+          <Router>
+              <Switch>
+                <Route exact path='/' component = { Main }/>
+            </Switch>
+          </Router>
       </div>
     );
   }

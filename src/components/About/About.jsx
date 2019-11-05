@@ -58,7 +58,7 @@ export default function About() {
                                             Address:
                                         </strong>
 
-                                        <a target="_blank" href='https://www.google.com/maps/place/6+Carrig+Ct,+Fortunestown,+Dublin/data=!4m2!3m1!1s0x4867746724d90917:0x66baef66771ce998?sa=X&ved=2ahUKEwjlwcLE1dPlAhWxqHEKHRVNCT0Q8gEwAHoECBQQAQ'>
+                                        <a href='https://www.google.com/maps/place/6+Carrig+Ct,+Fortunestown,+Dublin/data=!4m2!3m1!1s0x4867746724d90917:0x66baef66771ce998?sa=X&ved=2ahUKEwjlwcLE1dPlAhWxqHEKHRVNCT0Q8gEwAHoECBQQAQ'>
                                             6 Carrig Court, Fortunestown, Dublin
                                         </a>
                                     </p>
@@ -70,7 +70,7 @@ export default function About() {
                                             Phone:
                                         </strong>
 
-                                        <a target="_blank" href='tel:0833617736'>
+                                        <a href='tel:0833617736'>
                                             083 361 7736
                                         </a>
                                     </p>
