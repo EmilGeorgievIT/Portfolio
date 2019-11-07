@@ -55,22 +55,62 @@ export default class Portfolio extends Component {
                     <div className="section__body">
                         <Slider className='slider-portfolio' {...settings}>
                             <div className="slider__slide">
-                                <div style={backgroundImages.techfynder} className="slider__image">
+                                <div className="slider__inner">
+                                    <div style={backgroundImages.techfynder} className="slider__image">
+                                    </div>
+
+                                    <div className="slider__overlay">
+                                        <div className="slider__overlay-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+
+                            <div className="slider__slide">
+                                <div className="slider__inner">
+                                    <div style={backgroundImages.dailySale} className="slider__image">
+                                    </div>
+
+                                    <div className="slider__overlay">
+                                        <div className="slider__overlay-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="slider__slide">
-                                <div style={backgroundImages.dailySale} className="slider__image">
+                                <div className="slider__inner">
+                                    <div style={backgroundImages.eMart} className="slider__image">
+                                    </div>
+
+                                    <div className="slider__overlay">
+                                        <div className="slider__overlay-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="slider__slide">
-                                <div style={backgroundImages.eMart} className="slider__image">
-                                </div>
-                            </div>
+                                <div className="slider__inner">
+                                    <div style={backgroundImages.testtriangle} className="slider__image">
+                                    </div>
 
-                            <div className="slider__slide">
-                                <div style={backgroundImages.testtriangle} className="slider__image">
+                                    <div className="slider__overlay">
+                                        <div className="slider__overlay-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                            </p>
+                                        </div>
+                                    </div>                                    
                                 </div>
                             </div>
                         </Slider>
