@@ -26,15 +26,25 @@
         .slider__inner {
             position: relative;
         }
+        .slider__inner:hover {
+            &:after {
+                height: 100%;
+            }
+            .slider__overlay {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
         .slider__inner:after {
             content: '';
             position: absolute;
             background-color: $space;
             width: 10px;
             left: 0;
-            top: 0;
-            height: 100%;
-            z-index: 10;        
+            bottom: 0;
+            height: 0;
+            z-index: 10;
+            transition: height .4s ease;        
         }
         .slider__overlay {
             position: absolute;
@@ -46,9 +56,23 @@
             justify-content: center;
             align-items: center;
             background-color: rgba(34, 34, 34, 0.9);
-            opacity: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s;
             padding: 1rem;
             color: $white;
+        }
+        .slider__overlay-content {
+            & {
+                text-align: center;
+            }
+            h3 {
+                color: $white;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.5);
+            }
         }
         .slider__image {
             width: 100%;

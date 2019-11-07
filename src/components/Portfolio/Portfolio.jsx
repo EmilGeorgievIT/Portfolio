@@ -61,8 +61,12 @@ export default class Portfolio extends Component {
 
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
+                                            <h3>
+                                                Test
+                                            </h3>
+                                            
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             </p>
                                         </div>
                                     </div>
@@ -76,8 +80,12 @@ export default class Portfolio extends Component {
 
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
+                                            <h3>
+                                                Test
+                                            </h3>
+                                            
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             </p>
                                         </div>
                                     </div>
@@ -91,8 +99,12 @@ export default class Portfolio extends Component {
 
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
+                                            <h3>
+                                                Test
+                                            </h3>
+                                            
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             </p>
                                         </div>
                                     </div>
@@ -106,8 +118,12 @@ export default class Portfolio extends Component {
 
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
+                                            <h3>
+                                                Test
+                                            </h3>
+                                            
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est asperiores iste quas? Obcaecati veritatis dicta at autem ipsa architecto fuga.
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                             </p>
                                         </div>
                                     </div>                                    
