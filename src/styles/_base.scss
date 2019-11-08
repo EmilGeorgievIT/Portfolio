@@ -85,3 +85,34 @@ body {
       transition: .2s all linear;
   } 
 }
+
+.ico {
+    fill: $white;
+}
+
+/************************************
+    List Socials
+***********************************/
+
+.list-socials {
+    & {
+        position: fixed;
+        left: 20px;
+        bottom: 30px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    li {
+        margin: 0 .5rem;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        transition: transform .4s ease-in;
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+}

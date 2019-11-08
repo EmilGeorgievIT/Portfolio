@@ -54,7 +54,7 @@ export default class Portfolio extends Component {
                     
                     <div className="section__body">
                         <Slider className='slider-portfolio' {...settings}>
-                            <div className="slider__slide">
+                            <a href='http://techfynder.com/' className="slider__slide">
                                 <div className="slider__inner">
                                     <div style={backgroundImages.techfynder} className="slider__image">
                                     </div>
@@ -71,9 +71,9 @@ export default class Portfolio extends Component {
                                         </div>
                                     </div>
                                 </div>                                
-                            </div>
+                            </a>
 
-                            <div className="slider__slide">
+                            <a href='http://daily-sale.herokuapp.com/' className="slider__slide">
                                 <div className="slider__inner">
                                     <div style={backgroundImages.dailySale} className="slider__image">
                                     </div>
@@ -90,9 +90,9 @@ export default class Portfolio extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="slider__slide">
+                            <a href='https://emart-205419.firebaseapp.com/' className="slider__slide">
                                 <div className="slider__inner">
                                     <div style={backgroundImages.eMart} className="slider__image">
                                     </div>
@@ -109,9 +109,9 @@ export default class Portfolio extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="slider__slide">
+                            <a href='https://www.testtriangle.com/' className="slider__slide">
                                 <div className="slider__inner">
                                     <div style={backgroundImages.testtriangle} className="slider__image">
                                     </div>
@@ -128,7 +128,7 @@ export default class Portfolio extends Component {
                                         </div>
                                     </div>                                    
                                 </div>
-                            </div>
+                            </a>
                         </Slider>
                     </div>
                 </div>

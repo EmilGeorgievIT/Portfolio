@@ -12,6 +12,21 @@
         color: rgba(255, 255, 255, 0.5);
         @include section-background-image;
     }
+    .back-top {
+        display: inline-block;
+        text-decoration: none;
+    }
+    .ico-back-top {
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        fill: rgba(255, 255, 255, 0.5);
+        transition: fill .4s;
+    }
+    .ico-back-top:hover {
+        fill: $white;
+    }
+
     &:before {
         content: '';
         position: absolute;
