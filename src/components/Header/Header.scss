@@ -13,6 +13,9 @@
     width: 100%;
     padding: 20px 30px;
   }
+  &.fixed {
+    position: fixed;
+  }
   .logo {
     display: inline-block;
     max-width: 100px;

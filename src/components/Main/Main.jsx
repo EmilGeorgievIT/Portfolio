@@ -5,12 +5,19 @@ import About from '../About/About';
 import Portfolio from '../Portfolio/Portfolio';
 import Contact from '../Contact/Contact';
 
-
 export default class Main extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            isTop: false
+        }
+    }
+    
     render() {
         return (
             <Fragment>                
-                <Intro />
+                <Intro/>
                 <About />
                 <Resume />
                 <Portfolio />

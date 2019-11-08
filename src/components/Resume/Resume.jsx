@@ -10,7 +10,7 @@ export default class Resume extends Component {
         }
 
         return (
-            <section style={backgroundImage} className='section-resume'>
+            <section id='section-3' style={backgroundImage} className='section-resume'>
                 <div className="section__head section--header-underline">
                     <h2 className='section__title'>
                         Resume

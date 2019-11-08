@@ -10,7 +10,7 @@ export default class Contact extends Component {
         }
 
         return (
-            <section style={backgroundImage} className='section-contact'>
+            <section id='section-5' style={backgroundImage} className='section-contact'>
                 <div className="container">
                     <div className="section__head section--header-underline">
                         <h1 className='section__title'>

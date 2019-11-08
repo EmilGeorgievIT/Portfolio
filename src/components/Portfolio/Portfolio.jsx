@@ -20,9 +20,6 @@ export default class Portfolio extends Component {
             dailySale: {
                 backgroundImage: `url(${dailySale})`
             },
-            work: {
-                backgroundImage: `url(${work})`
-            },
             eMart: {
                 backgroundImage: `url(${eMart})`
             },
@@ -44,7 +41,7 @@ export default class Portfolio extends Component {
         };
 
         return (
-            <section style={backgroundImages.work} className='section-portfolio'>
+            <section id='section-4' style={backgroundImages.work} className='section-portfolio'>
                 <div className="container">
                     <div className="section__head section--header-underline">
                         <h2 className="section__title">
