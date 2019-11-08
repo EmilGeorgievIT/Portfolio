@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/helper';
 
 /************************************
   Intro
@@ -6,10 +7,8 @@
 .intro {
     & {
         position: relative;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
         min-height: 100vh;
+        @include section-background-image;
     }
 }
 
@@ -34,9 +33,7 @@
       display: block;
       height: 100%;
       width: 8.3%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include section-background-image;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
       transition: all 0.3s ease;
     }

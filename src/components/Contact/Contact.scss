@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+@import '../../styles/helper';
+
+
+/************************************
+    Section Contact
+***********************************/
+
+.section-contact {
+    & {
+        @include section-background-image;
+        padding: 4rem 0;
+    }
+    
+    .list-contacts {
+        & {
+            list-style: none;
+        }
+        
+        .ico-phone,
+        .ico-email {
+            fill: $white;
+        }
+
+        li {
+            & {
+                margin-bottom: 1rem;
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+            }
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0;
+               
+                .list-contacts-title {
+                    color: $white;
+                    font-family: 'JosefinSans', sans-serif;
+                    text-transform: uppercase;
+               } 
+            }
+        }
+    }
+}
+
+/************************************
+    Contact
+***********************************/
+
+.contact {
+    & {
+        display: flex;
+    }
+    .contact__title {
+        & {
+            position: relative;
+            font-family: 'JosefinSans', sans-serif;
+            color: $white;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        &:after {
+            content: '';
+            left: 50%;
+            margin-left: -75px;
+            position: absolute;
+            width: 150px;
+            border-bottom: 1px solid $space;
+            bottom: 5px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 50%;
+            background-color: $space;
+            transform: rotate(45deg);
+            width: 10px;
+            height: 10px; 
+        }
+    }
+    .contact__aside{
+        flex: 0 1 50%;
+        max-width: 50%;
+    }
+    
+    .contact__content {
+        flex: 0 1 50%;
+        max-width: 50%;
+    }
+}
