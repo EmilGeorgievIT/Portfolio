@@ -62,11 +62,11 @@ export default class Portfolio extends Component {
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
                                             <h3>
-                                                Test
+                                                Techfynder
                                             </h3>
                                             
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Dedicated platform for IT, Contract Professionals, to connect globally with Businesses, matching skills, rates, experience, and location. I learned how to working with Angular 7 and Node Js.
                                             </p>
                                         </div>
                                     </div>
@@ -81,11 +81,11 @@ export default class Portfolio extends Component {
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
                                             <h3>
-                                                Test
+                                                DailySale
                                             </h3>
                                             
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Online web platform which allows to post free ads and contact different users.
                                             </p>
                                         </div>
                                     </div>
@@ -100,11 +100,11 @@ export default class Portfolio extends Component {
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
                                             <h3>
-                                                Test
+                                                eMart
                                             </h3>
                                             
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                eCommerce website on Angular 4 and firebase
                                             </p>
                                         </div>
                                     </div>
@@ -119,11 +119,11 @@ export default class Portfolio extends Component {
                                     <div className="slider__overlay">
                                         <div className="slider__overlay-content">
                                             <h3>
-                                                Test
+                                                Test Triangle
                                             </h3>
                                             
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Test Triangle is an emerging IT service provider specializing in application testing, DevOps, RPA, Custom software development, mobile app development, Atlassian consultancy, niche IT staff augmentation and training in advanced technologies.
                                             </p>
                                         </div>
                                     </div>                                    
