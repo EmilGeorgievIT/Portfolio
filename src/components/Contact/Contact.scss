@@ -11,15 +11,19 @@
         @include section-background-image;
         padding: 4rem 0;
     }
-    
+    .section__head {
+        margin-bottom: 4rem;
+    }
     .list-contacts {
         & {
             list-style: none;
+            padding-top: 2rem;
         }
         
         .ico-phone,
         .ico-email {
-            fill: $white;
+            fill: $space;
+            margin-right: 1rem;
         }
 
         li {
@@ -27,18 +31,23 @@
                 margin-bottom: 1rem;
             }
             a {
-                display: inline-block;
+                text-align: center;
+                display: block;
+                color: rgba(255, 255, 255, 0.5);
                 text-decoration: none;
             }
             p {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-bottom: 0;
+                margin-bottom: 1rem;
                
                 .list-contacts-title {
                     color: $white;
-                    font-family: 'JosefinSans', sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    font-size: 15px;
+                    font-family: 'Josefin Sans', sans-serif;
                     text-transform: uppercase;
                } 
             }
@@ -57,30 +66,12 @@
     .contact__title {
         & {
             position: relative;
-            font-family: 'JosefinSans', sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
             color: $white;
             text-align: center;
             padding-bottom: 1rem;
         }
-        &:after {
-            content: '';
-            left: 50%;
-            margin-left: -75px;
-            position: absolute;
-            width: 150px;
-            border-bottom: 1px solid $space;
-            bottom: 5px;
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: 1px;
-            left: 50%;
-            background-color: $space;
-            transform: rotate(45deg);
-            width: 10px;
-            height: 10px; 
-        }
+       @include title-decoration;
     }
     .contact__aside{
         flex: 0 1 50%;
@@ -90,5 +81,67 @@
     .contact__content {
         flex: 0 1 50%;
         max-width: 50%;
+    }
+}
+
+/************************************
+    Contact Form
+***********************************/
+.contact-form { 
+    & {
+        font-family: 'Open Sans', 'sans-serif';
+    }
+
+    .form__head {
+        margin-bottom: 2rem;
+    }
+
+    .form__title {
+        position: relative;
+        font-family: 'Josefin Sans', sans-serif;
+        color: $white;
+        text-align: center;
+        padding-bottom: 1rem;
+        @include title-decoration;
+    }
+    .form__body {
+        .form__control {
+            margin-bottom: 2rem;
+        }
+        .form__input {
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            padding: 8px 20px;
+            background-color: #191919;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: 0;
+            border-bottom: 0;
+            color: $space;
+        }
+        .form__textarea {
+            resize: none;
+        }
+        .form__actions {
+            text-align: center;
+        }
+        .btn-submit{ 
+            & {
+                appearance: none;
+                padding: 10px 15px;
+                line-height: 17px;
+                letter-spacing: 2px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                text-transform: uppercase;
+                color: $white;
+                transition: .4s ease;
+                background: none;
+            }
+            &:hover {
+                background-color: $space;
+                border-color: $space;
+            } 
+        }
     }
 }
