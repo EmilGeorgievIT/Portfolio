@@ -79,5 +79,19 @@
             height: 320px;
             @include section-background-image;
         }
+        
+        
+        .slick-dots li button{
+            width: 10px;
+            height: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            
+            &:before{
+                content: none;
+            }
+        }
+        .slick-dots li.slick-active button {
+            background-color: $space;
+        }
     }
 }
