@@ -77,7 +77,7 @@ class Header extends Component {
                                     scrollTargetIds={["section-1", "section-2", "section-3", "section-4", "section-5"]}
                                     activeNavClass="current">
                                     <ul>
-                                        <li onClick={this.closeMenu} className='menu__item home'>
+                                        <li onClick={this.closeMenu} className='home'>
                                             <a className='current' href='#section-1'>
                                                 <span className='nav__title'>
                                                     Home
@@ -85,7 +85,7 @@ class Header extends Component {
                                             </a>
                                         </li>
     
-                                        <li onClick={this.closeMenu} className='menu__item about'>
+                                        <li onClick={this.closeMenu} className='about'>
                                             <a href='#section-2'>
                                                 <span className='nav__title'>
                                                     About Me
@@ -93,7 +93,7 @@ class Header extends Component {
                                             </a>
                                         </li>
     
-                                        <li onClick={this.closeMenu} className='menu__item resume'>
+                                        <li onClick={this.closeMenu} className='resume'>
                                             <a href='#section-3'>
                                                 <span className='nav__title'>
                                                     Resume
@@ -101,7 +101,7 @@ class Header extends Component {
                                             </a>
                                         </li>
     
-                                        <li onClick={this.closeMenu} className='menu__item works'>
+                                        <li onClick={this.closeMenu} className='works'>
                                             <a href='#section-4'>
                                                 <span className='nav__title'>
                                                     Portfolio
@@ -109,7 +109,7 @@ class Header extends Component {
                                             </a>
                                         </li>
     
-                                        <li onClick={this.closeMenu} className='menu__item contact'>
+                                        <li onClick={this.closeMenu} className='contact'>
                                             <a href='#section-5'>
                                                 <span className='nav__title'>
                                                     Contact

@@ -62,8 +62,7 @@ body {
       line-height: 1.8;
   }
 
-
-  .container--small {
+    .container--small {
         max-width: 800px;
     }
 
@@ -84,6 +83,40 @@ body {
       text-decoration: none;
       transition: .2s all linear;
   } 
+}
+/************************************
+    Basic Styling Mobile
+***********************************/
+
+@media(max-width: $mobile) {
+    body {
+        .h1,
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .h2,
+        h2 {
+            font-size: 1.4rem;
+        }
+        .h3,
+        h3 {
+            font-size: 1.1rem;
+        }
+        .h4,
+        h4 {
+            font-size: 1em;
+            font-weight: 500;
+        }
+        .h5,
+        h5 {
+            font-size: .7rem;
+        }
+        .h6,
+        h6 {
+            font-size: .6rem;
+        }
+    }
 }
 
 .ico {
@@ -115,4 +148,19 @@ body {
     a:hover {
         transform: scale(1.1);
     }
+}
+
+@media(max-width: $mobile) {
+    .list-socials {
+        & {
+            left: 10px;
+        }
+        li {
+            margin: 0 .3rem;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    } 
 }
