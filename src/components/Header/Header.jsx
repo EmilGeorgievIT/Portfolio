@@ -1,8 +1,10 @@
 import React, { Fragment, Component } from 'react'
 import logo from '../../images/logo2.png';
 import './Header.scss';
+import ScrollspyNav from "react-scrollspy-nav";
 
 class Header extends Component {
+
     closeMenu = () => {
         const burger = document.querySelector('.burger');
         const x = document.querySelector('.x');
@@ -68,60 +70,67 @@ class Header extends Component {
                         <a href='/' className="logo">
                             <img src={logo} alt=""/>
                         </a>
-                        
-                        <div className={this.props.isFixed? 'nav-mobile fixed': 'nav-mobile'}>
-                            <div className="circle"></div>
-                            
-                            <div className="menu">
-                                <ul>
-                                    <li onClick={this.closeMenu} className='home'>
-                                        <a className='current' href='#section-1'>
-                                            <span className='nav__title'>
-                                                Home
-                                            </span>
-                                        </a>
-                                    </li>
 
-                                    <li onClick={this.closeMenu} className='about'>
-                                        <a href='#section-2'>
-                                            <span className='nav__title'>
-                                                About Me
-                                            </span>
-                                        </a>
-                                    </li>
+                            {
+                               window.innerWidth <= 767? (
+                                    <div className={this.props.isFixed? 'nav-mobile fixed': 'nav-mobile'}>
+                                        <div className="circle"></div>
+                                        <div className="menu">
+                                        <ScrollspyNav
+                                            scrollTargetIds={["section-1", "section-2", "section-3", "section-4", "section-5"]}
+                                            activeNavClass="current">
+                                            <ul>
+                                                <li onClick={this.closeMenu}>
+                                                    <a href='#section-1'>
+                                                        <span className='nav__title'>
+                                                            Home
+                                                        </span>
+                                                    </a>
+                                                </li>
 
-                                    <li onClick={this.closeMenu} className='resume'>
-                                        <a href='#section-3'>
-                                            <span className='nav__title'>
-                                                Resume
-                                            </span>
-                                        </a>
-                                    </li>
+                                                <li onClick={this.closeMenu}>
+                                                    <a href='#section-2'>
+                                                        <span className='nav__title'>
+                                                            About Me
+                                                        </span>
+                                                    </a>
+                                                </li>
 
-                                    <li onClick={this.closeMenu} className='works'>
-                                        <a href='#section-4'>
-                                            <span className='nav__title'>
-                                                Portfolio
-                                            </span>
-                                        </a>
-                                    </li>
+                                                <li onClick={this.closeMenu}>
+                                                    <a href='#section-3'>
+                                                        <span className='nav__title'>
+                                                            Resume
+                                                        </span>
+                                                    </a>
+                                                </li>
 
-                                    <li onClick={this.closeMenu} className='contact'>
-                                        <a href='#section-5'>
-                                            <span className='nav__title'>
-                                                Contact
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-    
-                            <div onClick={this.openMenu} className="burger">
-                                <div className="x"></div>
-                                <div className="y"></div>
-                                <div className="z"></div>
-                            </div>
-                        </div>
+                                                <li onClick={this.closeMenu}>
+                                                    <a href='#section-4'>
+                                                        <span className='nav__title'>
+                                                            Portfolio
+                                                        </span>
+                                                    </a>
+                                                </li>
+
+                                                <li onClick={this.closeMenu}>
+                                                    <a href='#section-5'>
+                                                        <span className='nav__title'>
+                                                            Contact
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </ScrollspyNav>
+                                        </div>
+                
+                                        <div onClick={this.openMenu} className="burger">
+                                            <div className="x"></div>
+                                            <div className="y"></div>
+                                            <div className="z"></div>
+                                        </div>
+                                    </div>       
+                                ) : ''
+                            }
                     </div>
                 </header>
             </Fragment>
