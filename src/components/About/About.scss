@@ -15,16 +15,27 @@
     .back-top {
         display: inline-block;
         text-decoration: none;
-    }
-    .ico-back-top {
-        position: fixed;
-        bottom: 30px;
-        right: 20px;
-        fill: rgba(255, 255, 255, 0.5);
-        transition: fill .4s;
-    }
-    .ico-back-top:hover {
-        fill: $white;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .4s ease;
+        
+        .ico-back-top {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            fill: rgba(255, 255, 255, 0.5);
+            transition: fill .4s;
+        }
+        .ico-back-top:hover {
+            fill: $white;
+        }
+
+        &.fixed {
+            & {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
 
     &:before {

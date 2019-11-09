@@ -38,7 +38,7 @@
       width: 8.3%;
       @include section-background-image;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-      transition: all 0.3s ease;
+      transition: all .5s ease;
     }
      
     a.current { 
