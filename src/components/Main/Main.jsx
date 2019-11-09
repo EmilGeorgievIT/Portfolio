@@ -35,7 +35,6 @@ export default class Main extends Component {
                 isFixed: false
             });
         }
-        console.log(window.scrollY);
     }
 
     scrollToTop = () => {
