@@ -11,10 +11,11 @@
     left: 0;
     z-index: 100;
     width: 100%;
-    padding: 20px 30px;
+    padding: 14px 30px;
   }
   &.fixed {
     position: fixed;
+    background-color: rgba(34, 34, 34, 0.95);
   }
   .logo {
     display: inline-block;

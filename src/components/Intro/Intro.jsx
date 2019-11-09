@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import Header from '../Header/Header'
+
 import './Intro.scss';
 import code from '../../images/code.jpeg';
 import about from '../../images/about.jpg';
@@ -34,11 +34,10 @@ export default class Intro extends Component {
 
         return (
             <Fragment>
-                <Header />
-                
                 <div style={backgroundImages.intro}  id='section-1' className="intro">
-                    <nav className='nav-main'>
+                    <nav className={this.props.isFixed? 'nav-main fixed': 'nav-main'}>
                         <ScrollspyNav  
+                            headerBackground='true'
                             scrollTargetIds={["section-1", "section-2", "section-3", "section-4", "section-5"]}
                             activeNavClass="current">
                             
