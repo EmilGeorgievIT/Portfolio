@@ -27,7 +27,7 @@ class Header extends Component {
         
         setTimeout(function(){
             
-			y.style.display = 'block';
+			y.classList.remove('hidden');
             x.classList.remove('collapse');
             y.classList.remove('collapse');
             z.classList.remove('collapse');
@@ -50,7 +50,7 @@ class Header extends Component {
         menu.classList.toggle('animate');
        
         setTimeout(function(){ 			
-            y.style.display = 'none';
+            y.classList.toggle('hidden');
             x.classList.toggle('rotate30');
             z.classList.toggle('rotate150');	
         }, 70);

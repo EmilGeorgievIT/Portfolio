@@ -30,7 +30,7 @@
 @media(max-width: $tablet) {
   .header {
     & { 
-      padding: 7px 30px;
+      padding: 10px 30px;
     }
     .logo {
       max-width: 60px;
@@ -43,7 +43,7 @@
         height: 30px; 
         width: 26px;
         position: absolute;
-        top: 2px; 
+        top: 5px; 
         right: 21px;
         cursor: pointer;	
       }

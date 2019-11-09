@@ -58,7 +58,7 @@
 @media(max-width: $tablet) {
     .section-contact {
         & {
-            padding: 3rem 0;
+            padding: 4rem 0;
         }
         .section__head {
             margin-bottom: 2rem;
@@ -99,6 +99,9 @@
 @media(max-width: $tablet) {
     .contact {
         display: block;
+        .contact__title {
+
+        }
         .contact__aside {
             max-width: 100%;
             margin-bottom: 2rem;
@@ -144,6 +147,7 @@
             border-right: 1px solid rgba(255, 255, 255, 0.3);
             border-top: 0;
             border-bottom: 0;
+            border-radius: 0;
             color: $space;
         }
         .form__textarea {
