@@ -177,7 +177,7 @@ const About = ({isFixed}) => {
                                 </li>
                             </ul>
                             
-                            <a href='#section-1' className={isFixed? 'back-top fixed' : 'back-top'}>
+                            <a href='/' className={isFixed? 'back-top fixed' : 'back-top'}>
                                 <svg className='ico ico-back-top' width='30px' height='30px' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                         viewBox="0 0 31.479 31.479">
                                     <path d="M26.477,10.274c0.444,0.444,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0l-8.047-8.047

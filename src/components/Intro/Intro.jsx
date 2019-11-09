@@ -36,14 +36,13 @@ export default class Intro extends Component {
             <Fragment>
                 <div style={backgroundImages.intro}  id='section-1' className="intro">
                     <nav className={this.props.isFixed? 'nav-main fixed': 'nav-main'}>
-                        <ScrollspyNav  
-                            headerBackground='true'
+                        <ScrollspyNav
                             scrollTargetIds={["section-1", "section-2", "section-3", "section-4", "section-5"]}
                             activeNavClass="current">
                             
                             <ul>
-                                <li style={backgroundImages.home} className='current home'>
-                                    <a href='#section-1'>
+                                <li style={backgroundImages.home} className='home'>
+                                    <a className='current' href='#section-1'>
                                         <span className='nav__title'>
                                             Home
                                         </span>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import contact from '../../images/contact.jpg';
-
 import './Contact.scss';
 
 export default class Contact extends Component {

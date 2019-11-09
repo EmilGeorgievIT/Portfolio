@@ -24,11 +24,11 @@ export default class Main extends Component {
     }
 
     handleScroll = () => {
-        if(window.scrollY >= 870) {
+        if(window.scrollY >= 600) {
             this.setState({
                 isFixed: true
             });
-        } else if(window.scrollY <= 870) {
+        } else if(window.scrollY <= 600) {
             this.setState({
                 isFixed: false
             });
