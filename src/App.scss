@@ -332,3 +332,30 @@ body { margin: 0; font-family: 'Rubik', sans-serif; }
 .btn:hover {
   opacity: .7;
 }
+
+.back-top {
+  position: absolute;
+  display: inline-block;
+  text-decoration: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .4s ease;
+  bottom: 30px;
+  right: 20px;
+
+  .ico-back-top {
+      fill: rgba(255, 255, 255, 0.5);
+      transition: fill .4s;
+  }
+  .ico-back-top:hover {
+      fill: $white;
+  }
+
+  &.fixed {
+      & {
+          position: fixed;
+          visibility: visible;
+          opacity: 1;
+      }
+  }
+}
