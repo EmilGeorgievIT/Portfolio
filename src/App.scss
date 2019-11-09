@@ -232,7 +232,13 @@ body { margin: 0; font-family: 'Rubik', sans-serif; }
   }
 }
 
-
+@media(max-width: $tablet) {
+  .resume {
+      & ~ & {
+          margin-top: 2rem;
+      }
+  }
+}
 
 /**************************************
     List Resume
@@ -295,6 +301,20 @@ body { margin: 0; font-family: 'Rubik', sans-serif; }
     margin-bottom: .7rem;
   }
 }
+
+@media(max-width: $tablet) {
+  .list-skills {
+    & {
+      flex-direction: column;
+    } 
+    li {
+      flex: 0 1 100%;
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+
 
 /**************************************
     Progress

@@ -4,6 +4,7 @@
 /************************************
   Intro
 ***********************************/
+
 .intro {
     & {
         position: relative;
@@ -12,6 +13,13 @@
     }
 }
 
+@media(max-width: $tablet) {
+  .intro {
+    & {
+        min-height: 800px;
+    }
+  } 
+}
 
 /************************************
   Nav Main
@@ -109,4 +117,20 @@
         font-family: 'Open Sans', sans-serif;
       }
     }
+}
+
+@media(max-width: $tablet-portrait) {
+  .nav-main {
+    li {
+        width: 12%;
+    }
+  } 
+}
+
+@media(max-width: $tablet) {
+  .nav-main {
+    & {
+      display: none;
+    }
+  } 
 }

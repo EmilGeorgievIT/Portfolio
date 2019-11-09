@@ -18,6 +18,14 @@
     }
 }
 
+@media(max-width: $tablet) {
+    .section--header-underline {
+        .section__title {
+            font-size: 22px;
+        }
+    }
+}
+
 @mixin section-background-image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -44,4 +52,11 @@
         width: 10px;
         height: 10px; 
     }
+}
+
+/********************************
+    Helper Classes
+*********************************/
+.hidden {
+    display: none;
 }

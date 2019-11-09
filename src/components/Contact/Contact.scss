@@ -55,6 +55,18 @@
     }
 }
 
+@media(max-width: $tablet) {
+    .section-contact {
+        & {
+            padding: 3rem 0;
+        }
+        .section__head {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
 /************************************
     Contact
 ***********************************/
@@ -81,6 +93,20 @@
     .contact__content {
         flex: 0 1 50%;
         max-width: 50%;
+    }
+}
+
+@media(max-width: $tablet) {
+    .contact {
+        display: block;
+        .contact__aside {
+            max-width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .contact__content {
+            max-width: 100%;
+        }
     }
 }
 

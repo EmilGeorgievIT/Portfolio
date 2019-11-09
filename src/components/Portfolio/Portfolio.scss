@@ -97,3 +97,14 @@
         }
     }
 }
+
+@media(max-width: $tablet) {
+    .section-portfolio {
+        & {
+            padding: 3rem 0;
+        }
+        .slider-portfolio {
+            padding: 2rem 0;
+        }
+    }
+}
