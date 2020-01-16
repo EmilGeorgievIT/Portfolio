@@ -3,6 +3,81 @@ import contact from '../../images/contact.jpg';
 import './Contact.scss';
 
 export default class Contact extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.state ={
+            name: '',
+            phone: '',
+            email: '',
+            message: '',
+            errorName: '',
+            errorEmail: '',
+            errorPhone: '',
+            errorMessage: ''
+
+        }
+    }
+    errorValidation = () => {
+        const { 
+            name, 
+            phone, 
+            email, 
+            message, 
+            errorEmail, 
+            errorName,
+            errorMessage,
+            errorPhone
+        } = this.state;
+
+        if(name === '') {
+            this.setError('errorName', 'This field is required !');
+        } else {
+            this.setError('errorName', '');
+        }
+
+        if(phone === '') {
+            this.setError('errorPhone', 'This field is required !');
+        } else {
+            this.setError('errorPhone', '');
+        }
+
+        if(email === '') {
+            this.setError('errorEmail', 'This field is required !');
+        } else {
+            this.setError('errorEmail', '');
+        }
+
+        if(message === '') {
+            this.setError('errorMessage', 'This field is required !');
+        } else {
+            this.setError('errorMessage', '');
+        }
+
+        return !!name && !!email && !!message && !!phone;
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault();
+
+        if(this.errorValidation()){
+            console.log(this.state);
+        }
+
+    }
+    
+    setError = (name, value) => {
+        this.setState({
+            [name]: value
+        });
+    }
+
+    setValue = ({target}) => {
+        this.setState({
+            [target.name]: target.value
+        });
+    }
+
     render() {
         const backgroundImage = {
             'backgroundImage': `url(${contact})`
@@ -67,25 +142,41 @@ export default class Contact extends Component {
 
                                     <div className="form__body">
                                         <div className="form__control">
-                                            <input className='form__input' type="text" name='name' placeholder='Your Name'/>
+                                            <input className='form__input' type="text" onChange={this.setValue} name='name' placeholder='Your Name'/>
+                                            
+                                            <span className='contact-error'>
+                                                {this.state.errorName}
+                                            </span>
                                         </div>
 
                                         <div className="form__control">
-                                            <input className='form__input' type="email" name='email' placeholder='Your Email'/>
+                                            <input className='form__input' type="email" name='email' onChange={this.setValue} placeholder='Your Email'/>
+                                            
+                                            <span className='contact-error'>
+                                                {this.state.errorEmail}
+                                            </span>
                                         </div>
 
                                         <div className="form__control">
-                                            <input className='form__input' type="text" name='phone' placeholder='Your Phone'/>
+                                            <input className='form__input' type="text" name='phone' onChange={this.setValue} placeholder='Your Phone'/>
+                                            
+                                            <span className='contact-error'>
+                                                {this.state.errorPhone}
+                                            </span>
                                         </div>
 
                                         <div className="form__control">
-                                            <textarea className='form__input form__textarea' name="message" id="message" placeholder='Your Message' cols="30" rows="10">
+                                            <textarea className='form__input form__textarea' name="message" onChange={this.setValue} id="message" placeholder='Your Message' cols="30" rows="10">
 
                                             </textarea>
+
+                                            <span className='contact-error'>
+                                                {this.state.errorMessage}
+                                            </span>
                                         </div>
                                         
                                         <div className="form__actions">
-                                            <button className='btn-submit'>
+                                            <button onClick={this.onSubmit} className='btn-submit'>
                                                 Send Message
                                             </button>
                                         </div>

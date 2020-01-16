@@ -75,6 +75,13 @@
     & {
         display: flex;
     }
+    .contact-error {
+        display: block;
+        margin: .7rem 0;
+        font-size: 12px;
+        color: $space;
+    }
+    
     .contact__title {
         & {
             position: relative;
