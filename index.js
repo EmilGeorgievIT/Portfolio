@@ -23,7 +23,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/contact', mailRouter);
+app.use('/mail', mailRouter);
 
 
 // General error handling

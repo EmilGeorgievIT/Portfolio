@@ -82,11 +82,7 @@ export default class Contact extends Component {
             Contact.service.sendMail(this.state)
                 .then((data) => {
                     this.setState({
-                        submitted: true,
-                        name: '',
-                        email: '',
-                        phone: '',
-                        message: ''
+                        submitted: true
                     })
                 }).catch((error) => {
                     this.setState({
@@ -191,7 +187,7 @@ export default class Contact extends Component {
                                         </div>
 
                                         <div className="form__control">
-                                            <textarea className='form__input form__textarea' name="message" id="message" placeholder='Your Message' cols="30" rows="10">
+                                            <textarea className='form__input form__textarea' onChange={this.setValue} name="message" id="message" placeholder='Your Message' cols="30" rows="10">
 
                                             </textarea>
 
@@ -211,7 +207,7 @@ export default class Contact extends Component {
                                         }
                                         
                                         <div className="form__actions">
-                                            <button className='btn-submit'>
+                                            <button onClick={this.onSubmit} className='btn-submit'>
                                                 Send Message
                                             </button>
                                         </div>
