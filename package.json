@@ -1,36 +1,32 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass": "^4.13.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.2.0",
-    "react-scrollspy-nav": "^1.2.1",
-    "react-slick": "^0.25.2"
+  "name": "DailySale-REST-API",
+  "version": "1.0.0",
+  "engines": {
+    "node": "<= 10.16.0",
+    "npm": ">=6.0.0"
   },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "4.16.4",
+    "express-promise-router": "^3.0.3",
+    "express-validator": "5.3.1",
+    "helmet": "^3.18.0",
+    "nodemailer": "^6.2.1",
+    "nodemon": "^1.18.10",
+    "react-notifications": "^1.4.3",
+    "request": "^2.88.0"
   }
 }

@@ -1,75 +1,100 @@
 import React, { Component } from 'react'
 import contact from '../../images/contact.jpg';
 import './Contact.scss';
+import MessageService from '../../services/message-service';
 
 export default class Contact extends Component {
+    static service = new MessageService();
+
     constructor(props) {
         super(props);
         
         this.state ={
             name: '',
             phone: '',
+            submitted: false,
             email: '',
             message: '',
-            errorName: '',
-            errorEmail: '',
-            errorPhone: '',
-            errorMessage: ''
+            errors: {}
 
         }
     }
+
     errorValidation = () => {
         const { 
             name, 
             phone, 
             email, 
-            message, 
-            errorEmail, 
-            errorName,
-            errorMessage,
-            errorPhone
+            message
         } = this.state;
+        
+        let errors = {};
+        let formIsValid = true;
 
-        if(name === '') {
-            this.setError('errorName', 'This field is required !');
-        } else {
-            this.setError('errorName', '');
+
+        if(!name){
+            formIsValid = false;
+            errors["name"] = "Cannot be empty";
         }
 
-        if(phone === '') {
-            this.setError('errorPhone', 'This field is required !');
-        } else {
-            this.setError('errorPhone', '');
+        if(typeof name !== "undefined"){
+            if(!name.match(/^[a-zA-Z]+$/)){
+               formIsValid = false;
+               errors["name"] = "Only letters";
+            }        
         }
 
-        if(email === '') {
-            this.setError('errorEmail', 'This field is required !');
-        } else {
-            this.setError('errorEmail', '');
+        if(!email){
+            formIsValid = false;
+            errors["email"] = "Cannot be empty";
+         }
+         
+ 
+         if(typeof email !== "undefined"){
+            let lastAtPos = email.lastIndexOf('@');
+            let lastDotPos = email.lastIndexOf('.');
+ 
+            if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf('@@') === -1 && lastDotPos > 2 && (email.length - lastDotPos) > 2)) {
+               formIsValid = false;
+               errors["email"] = "Email is not valid";
+             }
         }
 
-        if(message === '') {
-            this.setError('errorMessage', 'This field is required !');
-        } else {
-            this.setError('errorMessage', '');
+        if(!phone){
+            formIsValid = false;
+            errors["phone"] = "Cannot be empty";
         }
 
-        return !!name && !!email && !!message && !!phone;
+        if(!message){
+            formIsValid = false;
+            errors["message"] = "Cannot be empty";
+         }
+
+        this.setState({errors: errors});
+        
+        return formIsValid;
     }
 
     onSubmit = (event) => {
         event.preventDefault();
 
         if(this.errorValidation()){
-            console.log(this.state);
+            Contact.service.sendMail(this.state)
+                .then((data) => {
+                    this.setState({
+                        submitted: true,
+                        name: '',
+                        email: '',
+                        phone: '',
+                        message: ''
+                    })
+                }).catch((error) => {
+                    this.setState({
+                        submitted: false
+                    });
+                })
         }
 
-    }
-    
-    setError = (name, value) => {
-        this.setState({
-            [name]: value
-        });
     }
 
     setValue = ({target}) => {
@@ -142,10 +167,11 @@ export default class Contact extends Component {
 
                                     <div className="form__body">
                                         <div className="form__control">
+<<<<<<< HEAD:client/src/components/Contact/Contact.jsx
                                             <input className='form__input' type="text" onChange={this.setValue} name='name' placeholder='Your Name'/>
                                             
                                             <span className='contact-error'>
-                                                {this.state.errorName}
+                                                {this.state.errors['name']}
                                             </span>
                                         </div>
 
@@ -153,7 +179,7 @@ export default class Contact extends Component {
                                             <input className='form__input' type="email" name='email' onChange={this.setValue} placeholder='Your Email'/>
                                             
                                             <span className='contact-error'>
-                                                {this.state.errorEmail}
+                                                {this.state.errors['email']}
                                             </span>
                                         </div>
 
@@ -161,22 +187,46 @@ export default class Contact extends Component {
                                             <input className='form__input' type="text" name='phone' onChange={this.setValue} placeholder='Your Phone'/>
                                             
                                             <span className='contact-error'>
-                                                {this.state.errorPhone}
+                                                {this.state.errors['phone']}
                                             </span>
+=======
+                                            <input className='form__input' type="text" name='name' placeholder='Your Name'/>
                                         </div>
 
                                         <div className="form__control">
-                                            <textarea className='form__input form__textarea' name="message" onChange={this.setValue} id="message" placeholder='Your Message' cols="30" rows="10">
+                                            <input className='form__input' type="email" name='email' placeholder='Your Email'/>
+                                        </div>
+
+                                        <div className="form__control">
+                                            <input className='form__input' type="text" name='phone' placeholder='Your Phone'/>
+>>>>>>> parent of 4ba8c80... Added validation in contact form:src/components/Contact/Contact.jsx
+                                        </div>
+
+                                        <div className="form__control">
+                                            <textarea className='form__input form__textarea' name="message" id="message" placeholder='Your Message' cols="30" rows="10">
 
                                             </textarea>
+<<<<<<< HEAD:client/src/components/Contact/Contact.jsx
 
                                             <span className='contact-error'>
-                                                {this.state.errorMessage}
+                                                {this.state.errors['message']}
                                             </span>
+=======
+>>>>>>> parent of 4ba8c80... Added validation in contact form:src/components/Contact/Contact.jsx
                                         </div>
+                                        {
+                                            this.state.submitted ?
+
+                                            <div className="form__control">
+                                                   <span className='contact-error'>
+                                                        Message sent successfully !
+                                                    </span> 
+                                            </div> : ''
+                                        
+                                        }
                                         
                                         <div className="form__actions">
-                                            <button onClick={this.onSubmit} className='btn-submit'>
+                                            <button className='btn-submit'>
                                                 Send Message
                                             </button>
                                         </div>
