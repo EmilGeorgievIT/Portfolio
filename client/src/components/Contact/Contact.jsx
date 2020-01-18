@@ -167,7 +167,6 @@ export default class Contact extends Component {
 
                                     <div className="form__body">
                                         <div className="form__control">
-<<<<<<< HEAD:client/src/components/Contact/Contact.jsx
                                             <input className='form__input' type="text" onChange={this.setValue} name='name' placeholder='Your Name'/>
                                             
                                             <span className='contact-error'>
@@ -189,30 +188,16 @@ export default class Contact extends Component {
                                             <span className='contact-error'>
                                                 {this.state.errors['phone']}
                                             </span>
-=======
-                                            <input className='form__input' type="text" name='name' placeholder='Your Name'/>
-                                        </div>
-
-                                        <div className="form__control">
-                                            <input className='form__input' type="email" name='email' placeholder='Your Email'/>
-                                        </div>
-
-                                        <div className="form__control">
-                                            <input className='form__input' type="text" name='phone' placeholder='Your Phone'/>
->>>>>>> parent of 4ba8c80... Added validation in contact form:src/components/Contact/Contact.jsx
                                         </div>
 
                                         <div className="form__control">
                                             <textarea className='form__input form__textarea' name="message" id="message" placeholder='Your Message' cols="30" rows="10">
 
                                             </textarea>
-<<<<<<< HEAD:client/src/components/Contact/Contact.jsx
 
                                             <span className='contact-error'>
                                                 {this.state.errors['message']}
                                             </span>
-=======
->>>>>>> parent of 4ba8c80... Added validation in contact form:src/components/Contact/Contact.jsx
                                         </div>
                                         {
                                             this.state.submitted ?
